@@ -18,7 +18,7 @@ namespace eCom.Infrastructure.Cognitive
     {
 
         static string serviceName = "aa-cogsrv-ecom";
-        static string apiKey = "8UBYVqCeSw1SeAha4khOANShyvEgjyFugdrFV6evrKAzSeC7Vp9Y";
+        static string apiKey = "<Cognitive Service API Key>";
         static string indexName = "azuresql-index";
 
         public static SearchResults<Cg_Product> FindProducts(PagingInfo pageInfo, string keywords)
@@ -30,7 +30,6 @@ namespace eCom.Infrastructure.Cognitive
 
             //Create a SearchClient to load and query documents
             SearchClient srchclient = new SearchClient(serviceEndpoint, indexName, credential);
-
 
 
             var searchOptions = new SearchOptions()
@@ -45,10 +44,6 @@ namespace eCom.Infrastructure.Cognitive
             var res = srchclient.Search<Cg_Product>(keywords, searchOptions);
 
             return res.Value;
-
-
-
-            client.Pipelines.CreateRunWithHttpMessagesAsync(resourceGroup, dataFactoryName, pipelineName, parameters)
 
         }
 

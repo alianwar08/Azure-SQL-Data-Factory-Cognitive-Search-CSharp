@@ -10,6 +10,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Management.DataFactory" Version="9.2.0" />
     <PackageReference Include="Microsoft.Azure.Management.ResourceManager" Version="3.17.4-preview" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
